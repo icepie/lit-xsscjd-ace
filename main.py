@@ -8,7 +8,7 @@ CONFIG = {
     'username': 'B19000000', # 帐号
     'password': '123456', # 密码
     'dotime': 256, #完成用时 (秒), 建议三十分钟以内
-    'sroce': 99 #想达到多少分以上?
+    'score': 99 #想达到多少分以上?
 }
 
 def logcat(msg, level='I'):
@@ -156,7 +156,7 @@ if litu.is_logged:
 
         # 刷分模式
         fc=0
-        while not (us >= CONFIG['sroce']):
+        while not (us >= CONFIG['score']):
             sc=sc+1
             logcat("正在调整参数...", )
             
