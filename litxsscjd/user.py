@@ -74,3 +74,29 @@ class litUesr:
         res = response.json()
 
         return res
+
+    def get_exam_paper(self):
+
+        try:
+            response = self.session.post(
+                url=endpoints["paper"], headers=self.__headers, verify=False
+            )
+        except:
+            return None
+
+        res = response.json()
+
+        return res
+    
+    def submit_exam_answer(self,data: dict):
+
+        try:
+            response = self.session.post(
+                url=endpoints["submit"],data=json.dumps(data) ,headers=self.__headers, verify=False
+            )
+        except:
+            return None
+
+        res = response.json()
+
+        return res
