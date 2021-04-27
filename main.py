@@ -23,7 +23,6 @@ def load_obj(name: str):
         d = eval(f.read())  # eval
     return d
 
-#litu = litUesr("B19070404","281826")
 litu = litUesr(CONFIG['username'],CONFIG['password'])
 
 if litu.is_logged:
