@@ -1,5 +1,3 @@
-
-
 # the platform url
 hostname = "http://xsscjd.sec.lit.edu.cn"
 
@@ -7,4 +5,5 @@ hostname = "http://xsscjd.sec.lit.edu.cn"
 endpoints = {
     "login": hostname + "/api/user/login",
     "current": hostname + "/api/student/user/current",
+    "record": hostname + "/api/student/exampaper/answer/record"
 }
