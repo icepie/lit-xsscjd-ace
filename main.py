@@ -144,7 +144,6 @@ if litu.is_logged:
         sc = 0
         qc = 0
         qp = 0 # 题目验证进度
-        qp_tmp = 1
         logcat("准备开始第 %d 次提交..." % sc)
         
         rte = litu.submit_exam_answer(answer_data)
@@ -246,7 +245,7 @@ if litu.is_logged:
                 qp=qp+1
                 answer_data = answer_data_tmp
             if qc >= 166:
-                qb = 50
+                break
 
             #print(us,usn,qp)
         logcat("准备开始最后一次提交...")
