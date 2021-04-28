@@ -240,12 +240,14 @@ if litu.is_logged:
                 exit()
 
             # 有些臭题处理一下
-            if qcn > qc or qc >= 166:
+            if qcn > qc:
                 fc = 0
                 qc = qcn
                 us = usn
                 qp=qp+1
                 answer_data = answer_data_tmp
+            if qc >= 166:
+                qb = 50
 
             #print(us,usn,qp)
         logcat("准备开始最后一次提交...")
