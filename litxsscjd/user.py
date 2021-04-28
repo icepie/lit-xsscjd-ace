@@ -3,7 +3,6 @@ import json
 from litxsscjd import endpoints
 from litxsscjd import util
 from urllib.parse import quote
-import curlify
 
 
 class litUesr:
