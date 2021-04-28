@@ -59,8 +59,7 @@ if litu.is_logged:
         #####
         # p_id=9826
         # logcat("准备获取旧试卷(id: %s)" % str(p_id))
-        # paper = load_obj(str(p_id))[['response']]
-        # print(paper['name'])
+        # paper = load_obj(str(p_id))
         #####
         # 这里结束
 
