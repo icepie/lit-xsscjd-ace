@@ -225,7 +225,7 @@ if litu.is_logged:
                 logcat("提交成功!")
                 usn = rte['response']['userScore']
                 qcn = rte['response']['questionCorrect']
-                logcat("分数: %s \t 题目进度: %s \t 正确数: %s" % (usn, qp+1, qcn))
+                logcat("分数: %s \t 题目进度: %s \t 正确数: %s" % (usn, qp+11, qcn))
             else:
                 logcat("提交失败!", "E")
                 logcat("自动退出")
@@ -263,7 +263,7 @@ if litu.is_logged:
         logcat("查找失败!", "E")
 
 else:
-    logcat("登陆失败: %s " % litu.login['message'],'E')
+    logcat("登陆失败!",'E')
 
 
 
