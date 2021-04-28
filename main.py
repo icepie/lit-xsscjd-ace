@@ -39,6 +39,8 @@ if litu.is_logged:
 
         input("按回车键开始添加一次答题记录...")
 
+        # 要跑旧试卷的话...从这里开始注释掉
+        #####
         logcat("准备获取新试卷...")
         paper = litu.get_exam_paper()
         #print(paper)
@@ -50,11 +52,17 @@ if litu.is_logged:
             save_obj(paper,str(paper['response']['id']))
         else:
             logcat("获取失败!", "E")
+        #####
+        # 这里结束
 
+        # 跑旧试卷这里开始去掉注释, id换成obj目录下的历史试卷
+        #####
         # p_id=9826
         # logcat("准备获取旧试卷(id: %s)" % str(p_id))
         # paper = load_obj(str(p_id))[['response']]
         # print(paper['name'])
+        #####
+        # 这里结束
 
         # 构造单题目回答
         # 单选: {"questionId":2105,"content":"A","contentArray":[],"completed":true,"itemOrder":1
@@ -232,10 +240,7 @@ if litu.is_logged:
                 exit()
 
             # 有些臭题处理一下
-            if qcn == qc:
-                fc=fc+1
-
-            if qcn > qc or fc >= 16:
+            if qcn > qc or qc >= 166:
                 fc = 0
                 qc = qcn
                 us = usn
