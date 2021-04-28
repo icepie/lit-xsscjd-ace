@@ -1,13 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
-import pickle
+
 from litxsscjd.user import litUesr
+from getpass import getpass
+import pickle
 import time
 
+
 CONFIG = {
-    'username': 'B19000000', # 帐号
-    'password': '123456', # 密码
-    'dotime': 256, #完成用时 (秒), 建议三十分钟以内
+    'username': '', # 帐号
+    'password': '', # 密码
+    'dotime': 0, #完成用时 (秒), 建议三十分钟以内
     'score': 99 #想达到多少分以上?
 }
 
@@ -22,6 +25,23 @@ def load_obj(name: str):
     with open('obj/' + name + '.py', encoding='utf-8') as f:
         d = eval(f.read())  # eval
     return d
+
+if len(CONFIG['username']) == 0:
+    CONFIG['username'] = input("学号: ")
+
+if len(CONFIG['password']) == 0:
+    CONFIG['password'] = getpass("密码(无回显): ")
+
+if CONFIG['dotime'] == 0:
+    while True:
+        try:
+            CONFIG['dotime'] = int(input("用时(30~1800秒): "))
+            if CONFIG['dotime'] >= 30 and CONFIG['dotime'] <= 1800:
+                break
+            else:
+                logcat("请输入正确的范围!",'E')
+        except:
+            logcat("请正确输入范围!",'E')
 
 litu = litUesr(CONFIG['username'],CONFIG['password'])
 
@@ -244,8 +264,10 @@ if litu.is_logged:
                 us = usn
                 qp=qp+1
                 answer_data = answer_data_tmp
-            if qc >= 166:
-                break
+            if sc >= 166:
+                logcat("这套题比较臭...只能这么高的分了", "E")
+                logcat("本次答题结束!")
+                exit()
 
             #print(us,usn,qp)
         logcat("准备开始最后一次提交...")
