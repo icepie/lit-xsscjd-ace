@@ -2,7 +2,7 @@
 
 洛阳理工学院 "学生手册知识竞答" 小助手...
 
-> 某天一气之下做了这玩意...
+>  这里是 `github actions` 版本
 
 [![QQ Group](https://img.shields.io/badge/QQ%20Group-647027400-red.svg)](https://jq.qq.com/?_wv=1027&k=lz0XyN86)
 [![TG Group](https://img.shields.io/badge/TG%20Group-lit_edu-blue.svg)](https://t.me/lit_edu)
