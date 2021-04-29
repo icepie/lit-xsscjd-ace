@@ -61,6 +61,7 @@ if litu.is_logged:
             # save_obj(paper,str(paper['response']['id']))
         else:
             logcat("获取失败!", "E")
+            exit(1)
         #####
         # 这里结束
 
@@ -166,7 +167,7 @@ if litu.is_logged:
         else:
             logcat("提交失败!", "E")
             logcat("自动退出")
-            exit()
+            exit(1)
 
         # 刷分模式
         fc = 0
@@ -279,11 +280,13 @@ if litu.is_logged:
         else:
             logcat("提交失败!", "E")
             logcat("自动退出")
-            exit()
+            exit(1)
         logcat("本次答题结束!")
         # print(answer_data)
     else:
         logcat("查找失败!", "E")
+        exit(1)
 
 else:
     logcat("登陆失败: " + litu.login["message"], "E")
+    exit(1)
