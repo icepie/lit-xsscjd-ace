@@ -4,6 +4,7 @@
 
 > 某天一气之下做了这玩意...
 
+[![The CI Test](https://github.com/icepie/lit-xsscjd-ace/actions/workflows/ci.yaml/badge.svg)](https://github.com/icepie/lit-xsscjd-ace/actions/workflows/ci.yaml)
 [![QQ Group](https://img.shields.io/badge/QQ%20Group-647027400-red.svg)](https://jq.qq.com/?_wv=1027&k=lz0XyN86)
 [![TG Group](https://img.shields.io/badge/TG%20Group-lit_edu-blue.svg)](https://t.me/lit_edu)
 
