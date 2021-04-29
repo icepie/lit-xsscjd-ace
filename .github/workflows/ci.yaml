@@ -1,6 +1,10 @@
 name: The CI Test
 
-on: [push]
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  watch:
+    types: started
 
 jobs:
   build:
