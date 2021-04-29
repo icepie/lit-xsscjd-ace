@@ -17,17 +17,14 @@
 
 ### 配置
 
-> 当然你也可以选择直接运行
+添加以下 `repository secret`
 
-打开 `main.py` 编辑以下字段并保存
-```python
-CONFIG = {
-    'username': 'B19000000', # 帐号
-    'password': '123456', # 密码
-    'dotime': 256, # 完成用时 (秒), 建议三十分钟以内
-    'score': 99 # 想达到多少分以上?
-}
 ```
+LIT_USERNAME
+LIT_PASSWORD
+```
+
+如需自定义请手动编辑 `ci.yaml`
 
 ### 运行
 

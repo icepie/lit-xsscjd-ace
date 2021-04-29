@@ -33,7 +33,7 @@ litu = litUesr(CONFIG["username"], CONFIG["password"])
 
 if litu.is_logged:
     logcat("登陆成功!")
-    logcat("用户名: %s" % litu.info["userName"])
+    logcat("用户名: %s" % CONFIG["username"])
     logcat("正在查找答题记录...")
     records = litu.get_record()
     if records["code"] == 1:
