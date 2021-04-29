@@ -1,4 +1,4 @@
-name: The CI Test
+name: CI
 
 on:
   schedule:
